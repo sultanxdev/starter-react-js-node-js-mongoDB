@@ -1,60 +1,43 @@
-# Starter – React, Node.js, MongoDB (MERN)
+# SaaS Starter Kit
 
-A **production-ready starter template** for building full-stack web applications using **React**, **Node.js (Express)**, and **MongoDB**.
-
-This repository is designed to eliminate repetitive setup work and provide a clean, scalable foundation for real-world applications — not demos.
-
----
-
-## Tech Stack
-
-### Frontend
-- React
-- React Router
-- Axios
-- Modern ES6+ syntax
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- RESTful API architecture
-
-### Tooling
-- Concurrently (run frontend & backend together)
-- Environment-based configuration
-- Modular folder structure
-
----
-
----
+A high-performance, modular SaaS starter kit built with React, Node.js, and MongoDB.
 
 ## Features
+- **Modern UI**: Clean, premium design using Tailwind CSS (Emerald & Slate theme).
+- **Authentication**: JWT-based email/password auth and Google Login integration.
+- **AI Integration**: Out-of-the-box Google Gemini AI assistant.
+- **Payments**: Razorpay integration for INR payments (UPI, Cards, NetBanking).
+- **Security**: Rate limiting, Helmet, and secured routes.
+- **Database**: MongoDB with Mongoose for minimal persistence.
 
-- Clean separation between frontend and backend
-- REST API with proper routing structure
-- MongoDB connection using Mongoose
-- Centralized environment configuration
-- Ready for authentication, authorization, and scaling
+## Tech Stack
+- **Frontend**: Vite, React, Tailwind CSS, Framer Motion, Axios.
+- **Backend**: Node.js, Express, Mongoose, Razorpay SDK, Gemini AI SDK.
 
----
+## Setup Instructions
 
-## Getting Started
+### Backend
+1. `cd backend`
+2. `npm install`
+3. Create a `.env` file based on `.env.example` and fill in your credentials:
+   - `MONGO_URI`
+   - `JWT_SECRET`
+   - `GEMINI_API_KEY`
+   - `RAZORPAY_KEY_ID`
+   - `RAZORPAY_KEY_SECRET`
+4. `npm start` or `node server.js`
 
-### Prerequisites
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. Create a `.env` file:
+   - `VITE_API_URL=http://localhost:5000/api`
+4. `npm run dev`
 
-- Node.js (v18+ recommended)
-- MongoDB (local or cloud)
-- npm or yarn
+## Folder Structure
+The project follows a modular design for scalability:
+- **`backend/`**: Routes, controllers, models, and config are separated.
+- **`frontend/`**: Components, pages, context, and api layers are separated.
 
----
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/starter-react-node-mongodb.git
-cd starter-react-node-mongodb
-
-
+## License
+MIT
